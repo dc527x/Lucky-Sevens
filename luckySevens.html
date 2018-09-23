@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--
+  Name: Diego Chico
+  Date Created: 09232018
+  Most recent revisison: 09232018
+-->
+
+<html lang="en">
+
+<head>
+  <title>Lucky Sevens</title>
+    <script type="text/javascript" src="luckySevens.js"></script>
+
+    <style>
+    h1 {
+      text-align: center;
+    }
+
+    body {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    table {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
+      width: 90px;
+      height: 40px;
+    }
+
+    div .firstBox {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid #0d1f2d;
+      border-collapse: collapse;
+      padding: 5px 10px;
+    }
+
+    tr:nth-child(2) {
+      background-color: grey;
+    }
+
+    tr:nth-child(odd){
+      background-color: darkgray;
+    }
+
+    tr:nth-child(1) {
+      background-color: transparent;
+    }
+
+    </style>
+</head>
+
+<body>
+  <div class="playGame">
+    <form>
+    <h1>Lucky Sevens</h1>
+    <div class="firstBox">
+    Starting Bet: <input type="text" id="startingBet" name="startingsBet" value="$0.00"><br />
+  </div>
+    <section>
+      <button onclick="validateNumber()" type="button" class="Play" id="playAgain">Play</button>
+    </section>
+    <div id=validation>
+    </div>
+    <hr />
+    <div class="results" id="outcome">
+      <table>
+        <tr>
+          <th colspan="2">Results</th>
+        </tr>
+        <tr class="newColor">
+          <td>Starting Bet</td>
+          <td id="initialBet">$###.##</td>
+        </tr>
+        <tr>
+          <td>Total Rolls Before Going Broke</td>
+          <td id="numberRolls">###</td>
+        </tr>
+        <tr class="newColor">
+          <td>Highest Amount Won</td>
+          <td id="highestAmount">$####.##</td>
+        </tr>
+        <tr class="newColor">
+          <td>Roll Count at Highest Amount</td>
+          <td id="highestRoll">###</td>
+        </tr>
+      </table>
+    </div>
+  </form>
+</body>
+
+<footer>
+</footer>
+</html>
